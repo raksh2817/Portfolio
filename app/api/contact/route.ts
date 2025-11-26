@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,42 +23,57 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Log submission (always log for debugging)
-    console.log('Contact form submission:', {
+    // Validate Supabase environment variables
+    if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
+      console.error('Supabase environment variables are not set')
+      return NextResponse.json(
+        { error: 'Server configuration error. Please contact the administrator.' },
+        { status: 500 }
+      )
+    }
+
+    // Create Supabase client
+    const supabase = createClient(
+      process.env.SUPABASE_URL,
+      process.env.SUPABASE_ANON_KEY
+    )
+
+    // Insert contact form submission into Supabase
+    const { data, error } = await supabase
+      .from('contact_submissions')
+      .insert([
+        {
+          name,
+          email,
+          subject,
+          message,
+          created_at: new Date().toISOString(),
+        },
+      ])
+      .select()
+
+    if (error) {
+      console.error('Supabase error:', error)
+      return NextResponse.json(
+        { error: 'Failed to save message. Please try again.' },
+        { status: 500 }
+      )
+    }
+
+    // Log successful submission
+    console.log('Contact form submission saved:', {
+      id: data[0]?.id,
       name,
       email,
       subject,
-      message,
       timestamp: new Date().toISOString(),
     })
 
-    // Note: This API route is kept for future use with email services like Resend
-    // Currently using FormSubmit directly in the Contact component
-    // To use this route with Resend:
-    // 1. Install: npm install resend
-    // 2. Set RESEND_API_KEY environment variable
-    // 3. Uncomment the code below
-    
-    // Send email using Resend (if API key is configured and resend is installed)
-    // const resendApiKey = process.env.RESEND_API_KEY
-    // if (resendApiKey) {
-    //   try {
-    //     const { Resend } = await import('resend')
-    //     const resend = new Resend(resendApiKey)
-    //     await resend.emails.send({
-    //       from: 'Portfolio Contact <onboarding@resend.dev>',
-    //       to: 'rakshithsrinath17@gmail.com',
-    //       replyTo: email,
-    //       subject: `Portfolio Contact: ${subject}`,
-    //       html: `...`,
-    //     })
-    //   } catch (emailError) {
-    //     console.error('Email sending error:', emailError)
-    //   }
-    // }
-
     return NextResponse.json(
-      { message: 'Message sent successfully!' },
+      { 
+        message: 'Message sent successfully!',
+        id: data[0]?.id 
+      },
       { status: 200 }
     )
   } catch (error) {

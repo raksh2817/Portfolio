@@ -101,16 +101,27 @@ The website uses a modern gradient color palette:
 
 ## Contact Form Setup
 
-The contact form is **fully functional** and uses **FormSubmit** - a free service that requires no setup!
+The contact form stores all submissions in a **Supabase database**.
 
-- ✅ **No API keys needed**
-- ✅ **No configuration required**
-- ✅ **Works immediately**
-- ✅ **Emails sent to**: `rakshithsrinath17@gmail.com`
+### Quick Setup
 
-FormSubmit provides 50 free submissions per month. For more details, see `CONTACT_FORM_SETUP.md`.
+1. ✅ **Supabase is already connected to Vercel** - Environment variables are automatically provided!
+2. **Run the SQL** from `supabase-setup.sql` in your Supabase SQL Editor to create the table
+3. **Install dependencies**: `npm install`
 
-**Note**: The API route at `app/api/contact/route.ts` is available if you want to switch to a different email service (Resend, SendGrid, etc.) in the future.
+**For Local Development:** Create `.env.local` with your Supabase credentials (see `SUPABASE_SETUP.md`)
+
+For detailed setup instructions, see `SUPABASE_SETUP.md`.
+
+### Features
+
+- ✅ All submissions stored in database
+- ✅ Secure with Row Level Security
+- ✅ View submissions in Supabase dashboard
+- ✅ Track read/replied status
+- ✅ No third-party email service needed
+
+**Note**: Make sure to set up the Supabase table and environment variables before deploying.
 
 ## Recent Enhancements
 

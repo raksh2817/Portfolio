@@ -23,25 +23,16 @@ export default function Contact() {
     e.preventDefault()
     setStatus('sending')
 
-    // FormSubmit endpoint - emails will be sent to rakshithsrinath17@gmail.com
-    const formSubmitUrl = 'https://formsubmit.co/ajax/rakshithsrinath17@gmail.com'
-
     try {
-      const response = await fetch(formSubmitUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          _captcha: false, // Disable captcha for better UX
-          _template: 'table', // Nice table template
-        }),
+        body: JSON.stringify(formData),
       })
+
+      const data = await response.json()
 
       if (response.ok) {
         setStatus('success')
