@@ -109,7 +109,7 @@ export default function Hero() {
               </svg>
             </motion.a>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/raksh2817"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary-400 transition-colors"
