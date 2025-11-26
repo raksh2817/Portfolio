@@ -23,13 +23,24 @@ export default function Contact() {
     e.preventDefault()
     setStatus('sending')
 
+    // FormSubmit endpoint - emails will be sent to rakshithsrinath17@gmail.com
+    const formSubmitUrl = 'https://formsubmit.co/ajax/rakshithsrinath17@gmail.com'
+
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(formSubmitUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _captcha: false, // Disable captcha for better UX
+          _template: 'table', // Nice table template
+        }),
       })
 
       if (response.ok) {
@@ -166,7 +177,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-primary-400 mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <motion.a
-                  href="mailto:rakshith014@gmail.com"
+                  href="mailto:rakshithsrinath17@gmail.com"
                   className="flex items-center space-x-4 p-4 rounded-xl bg-gradient-to-br from-primary-900/50 to-primary-800/30 border border-primary-500/30 hover:border-primary-400 transition-all group"
                   whileHover={{ scale: 1.02 }}
                 >
@@ -174,13 +185,13 @@ export default function Contact() {
                   <div>
                     <div className="text-sm text-gray-400">Email</div>
                     <div className="text-primary-400 font-semibold group-hover:text-primary-300">
-                      rakshith014@gmail.com
+                      rakshithsrinath17@gmail.com
                     </div>
                   </div>
                 </motion.a>
 
                 <motion.a
-                  href="tel:+919862237572"
+                  href="tel:+13156210543"
                   className="flex items-center space-x-4 p-4 rounded-xl bg-gradient-to-br from-secondary-900/50 to-secondary-800/30 border border-secondary-500/30 hover:border-secondary-400 transition-all group"
                   whileHover={{ scale: 1.02 }}
                 >
@@ -188,7 +199,7 @@ export default function Contact() {
                   <div>
                     <div className="text-sm text-gray-400">Phone</div>
                     <div className="text-secondary-400 font-semibold group-hover:text-secondary-300">
-                      +91 9862237572
+                      +1 (315) 621-0543
                     </div>
                   </div>
                 </motion.a>

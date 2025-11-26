@@ -101,26 +101,16 @@ The website uses a modern gradient color palette:
 
 ## Contact Form Setup
 
-The contact form is functional and ready to use. To enable email sending:
+The contact form is **fully functional** and uses **FormSubmit** - a free service that requires no setup!
 
-1. **Option 1: Use Resend (Recommended)**
-   - Sign up at [Resend](https://resend.com)
-   - Get your API key
-   - Install: `npm install resend`
-   - Update `app/api/contact/route.ts` with Resend integration (see comments in file)
+- ✅ **No API keys needed**
+- ✅ **No configuration required**
+- ✅ **Works immediately**
+- ✅ **Emails sent to**: `rakshithsrinath17@gmail.com`
 
-2. **Option 2: Use SendGrid**
-   - Sign up at [SendGrid](https://sendgrid.com)
-   - Get your API key
-   - Install: `npm install @sendgrid/mail`
-   - Update the API route accordingly
+FormSubmit provides 50 free submissions per month. For more details, see `CONTACT_FORM_SETUP.md`.
 
-3. **Option 3: Use Nodemailer with SMTP**
-   - Install: `npm install nodemailer`
-   - Configure with your SMTP settings
-   - Update the API route
-
-Currently, the form logs submissions to the console. Replace the TODO section in `app/api/contact/route.ts` with your preferred email service.
+**Note**: The API route at `app/api/contact/route.ts` is available if you want to switch to a different email service (Resend, SendGrid, etc.) in the future.
 
 ## Recent Enhancements
 
