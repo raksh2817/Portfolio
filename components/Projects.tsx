@@ -70,14 +70,29 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`glass-effect rounded-2xl p-6 card-hover border-t-4 ${project.borderClass}`}
+              className={`glass-effect rounded-2xl p-6 card-hover border-t-4 ${project.borderClass} group relative overflow-hidden`}
+              whileHover={{ y: -8 }}
             >
-              <div className={`text-sm font-semibold ${project.textClass} mb-2`}>
-                {project.period}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className={`text-xs font-semibold ${project.textClass} mb-3 px-2 py-1 rounded-full inline-block bg-${project.borderClass.split('-')[1]}-900/30`}>
+                  {project.period}
+                </div>
+                <h3 className="text-xl font-bold text-gray-200 mb-3 group-hover:text-primary-300 transition-colors">
+                  {project.title}
+                </h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.split(', ').map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-1 rounded-full bg-primary-900/30 border border-primary-500/30 text-gray-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-gray-300 leading-relaxed text-sm">{project.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-200 mb-3">{project.title}</h3>
-              <p className="text-sm text-gray-400 mb-4">{project.tech}</p>
-              <p className="text-gray-300 leading-relaxed">{project.description}</p>
             </motion.div>
           ))}
         </div>

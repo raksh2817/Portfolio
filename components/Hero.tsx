@@ -49,24 +49,26 @@ export default function Hero() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-6xl md:text-8xl font-bold mb-6"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
-            <span className="text-gradient">Rakshith Srinath</span>
+            <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400">
+              Rakshith S
+            </span>
           </motion.h1>
           
           <motion.p
             variants={itemVariants}
             className="text-2xl md:text-4xl text-gray-300 mb-4"
           >
-            Data Engineer & Full-Stack Developer
+            Graduate Research Assistant | Database Developer | Data Engineer
           </motion.p>
           
           <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"
           >
-            Building scalable data pipelines processing 2-3 TB daily • 
-            Deploying ML models • Full-stack development
+            Master&apos;s in Applied Data Science • Building scalable data pipelines • 
+            Developing predictive models • Automating reporting systems
           </motion.p>
           
           <motion.div
@@ -96,7 +98,7 @@ export default function Hero() {
             className="mt-12 flex justify-center space-x-6"
           >
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rakshith-s-170298"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary-400 transition-colors"
