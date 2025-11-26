@@ -18,7 +18,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-gray-400">
-            Let's connect and discuss opportunities in data engineering, ML, or full-stack development.
+            Let&apos;s connect and discuss opportunities in data engineering, ML, or full-stack development.
           </p>
         </motion.div>
 
