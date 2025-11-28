@@ -7,7 +7,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Rakshith S | Graduate Research Assistant | Database Developer | Data Engineer',
+  title: 'Rakshith Srinath | Graduate Research Assistant | Database Developer | Data Engineer',
   description: 'Master\'s in Applied Data Science with 3 years of professional experience. Building scalable data pipelines, automating reporting systems, and developing predictive models. Expert in Python, SQL, Spark, Azure, and AWS.',
   keywords: 'Data Engineer, Database Developer, Applied Data Science, Python, SQL, Spark, Azure, AWS, Machine Learning, Data Analytics',
 }

@@ -64,7 +64,7 @@ export default function Navigation() {
             onClick={() => scrollToSection('home')}
           >
             <span className="bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
-              Rakshith S
+              Rakshith Srinath
             </span>
           </motion.div>
           

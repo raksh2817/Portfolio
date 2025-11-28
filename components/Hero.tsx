@@ -52,7 +52,7 @@ export default function Hero() {
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
             <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400">
-              Rakshith S
+              Rakshith Srinath
             </span>
           </motion.h1>
           
