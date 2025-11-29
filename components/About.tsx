@@ -22,7 +22,7 @@ export default function About() {
     {
       year: '2024',
       title: 'Academic Excellence',
-      description: 'Pursuing Master\'s in Applied Data Science while contributing to research and developing custom database solutions.',
+      description: 'Pursuing Master&apos;s in Applied Data Science while contributing to research and developing custom database solutions.',
       icon: '🎓',
     },
     {
@@ -93,13 +93,13 @@ const buildDataPipeline = async () => {
             <div className="glass-effect rounded-2xl p-8 card-hover border-l-4 border-primary-500">
               <h3 className="text-2xl font-bold text-primary-400 mb-4">My Story</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                I'm a <span className="text-primary-400 font-semibold">Master's student in Applied Data Science</span> with a passion for turning raw data into meaningful solutions. What started as curiosity about how data drives decisions has evolved into a career building production-grade systems.
+                I&apos;m a <span className="text-primary-400 font-semibold">Master&apos;s student in Applied Data Science</span> with a passion for turning raw data into meaningful solutions. What started as curiosity about how data drives decisions has evolved into a career building production-grade systems.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Currently, I'm balancing <span className="text-secondary-400 font-semibold">academic research</span> in construction materials with <span className="text-accent-400 font-semibold">real-world applications</span>—developing custom database solutions, building AI-powered systems, and creating data pipelines that process millions of records daily.
+                Currently, I&apos;m balancing <span className="text-secondary-400 font-semibold">academic research</span> in construction materials with <span className="text-accent-400 font-semibold">real-world applications</span>—developing custom database solutions, building AI-powered systems, and creating data pipelines that process millions of records daily.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                When I'm not coding, I'm exploring the latest in <span className="text-primary-400 font-semibold">LLMs, AI agents, and distributed systems</span>. I believe the best solutions come from understanding both the technical and human sides of data.
+                When I&apos;m not coding, I&apos;m exploring the latest in <span className="text-primary-400 font-semibold">LLMs, AI agents, and distributed systems</span>. I believe the best solutions come from understanding both the technical and human sides of data.
               </p>
             </div>
 
