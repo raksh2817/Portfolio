@@ -9,7 +9,6 @@ import Projects from '@/components/Projects'
 import Education from '@/components/Education'
 import Certifications from '@/components/Certifications'
 import GitHubRepositories from '@/components/GitHubRepositories'
-import GitHubActivity from '@/components/GitHubActivity'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -26,7 +25,6 @@ export default function Home() {
       <GitHubRepositories />
       <Education />
       <Certifications />
-      <GitHubActivity />
       <Contact />
       <ScrollToTop />
     </main>
