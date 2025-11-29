@@ -22,7 +22,7 @@ export default function About() {
     {
       year: '2024',
       title: 'Academic Excellence',
-      description: 'Pursuing Master&apos;s in Applied Data Science while contributing to research and developing custom database solutions.',
+      description: 'Pursuing Masters in Applied Data Science while contributing to research and developing custom database solutions.',
       icon: '🎓',
     },
     {
