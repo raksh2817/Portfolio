@@ -260,33 +260,203 @@ const buildDataPipeline = async () => {
                   className="flex-1"
                 >
                   <div className="relative">
-                    {/* AI Brain visualization */}
+                    {/* Neural Network Visualization */}
                     <div className="relative w-full max-w-md mx-auto">
-                      <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 to-primary-500/20 rounded-full blur-3xl animate-pulse" />
-                      <div className="relative bg-gradient-to-br from-accent-900/50 to-primary-900/50 rounded-2xl p-8 border border-accent-500/30">
-                        <div className="grid grid-cols-3 gap-4">
-                          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-                            <motion.div
-                              key={i}
-                              initial={{ opacity: 0, scale: 0 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              viewport={{ once: true }}
-                              className="aspect-square rounded-lg bg-gradient-to-br from-accent-400/30 to-primary-400/30 border border-accent-500/50 flex items-center justify-center"
-                              animate={{
-                                opacity: [0.3, 0.7, 0.3],
-                              }}
-                              transition={{
-                                scale: { duration: 0.3, delay: 0.5 + i * 0.05 },
-                                opacity: {
-                                  duration: 2,
+                      <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 via-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-pulse" />
+                      <div className="relative bg-gradient-to-br from-accent-900/50 via-primary-900/50 to-secondary-900/50 rounded-2xl p-6 md:p-8 border border-accent-500/30 overflow-hidden">
+                        {/* Neural Network Layers */}
+                        <svg className="w-full h-64 md:h-80" viewBox="0 0 300 320" preserveAspectRatio="xMidYMid meet">
+                          <defs>
+                            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#f43f5e" stopOpacity="0.4" />
+                              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.4" />
+                              <stop offset="100%" stopColor="#d946ef" stopOpacity="0.4" />
+                            </linearGradient>
+                            <filter id="glow">
+                              <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                              <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                              </feMerge>
+                            </filter>
+                          </defs>
+                          
+                          {/* Input Layer (3 nodes) */}
+                          {[0, 1, 2].map((i) => {
+                            const y = 40 + i * 80
+                            return (
+                              <g key={`input-${i}`}>
+                                <motion.circle
+                                  cx="50"
+                                  cy={y}
+                                  r="12"
+                                  fill="url(#neuralGradient)"
+                                  stroke="#f43f5e"
+                                  strokeWidth="2"
+                                  filter="url(#glow)"
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  whileInView={{ opacity: 1, scale: 1 }}
+                                  viewport={{ once: true }}
+                                  animate={{
+                                    opacity: [0.4, 1, 0.4],
+                                    scale: [0.9, 1.1, 0.9],
+                                  }}
+                                  transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay: i * 0.3,
+                                  }}
+                                />
+                              </g>
+                            )
+                          })}
+                          
+                          {/* Hidden Layer 1 (4 nodes) */}
+                          {[0, 1, 2, 3].map((i) => {
+                            const y = 20 + i * 60
+                            return (
+                              <g key={`hidden1-${i}`}>
+                                <motion.circle
+                                  cx="150"
+                                  cy={y}
+                                  r="14"
+                                  fill="url(#neuralGradient)"
+                                  stroke="#6366f1"
+                                  strokeWidth="2"
+                                  filter="url(#glow)"
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  whileInView={{ opacity: 1, scale: 1 }}
+                                  viewport={{ once: true }}
+                                  animate={{
+                                    opacity: [0.4, 1, 0.4],
+                                    scale: [0.9, 1.1, 0.9],
+                                  }}
+                                  transition={{
+                                    duration: 2.5,
+                                    repeat: Infinity,
+                                    delay: 0.5 + i * 0.25,
+                                  }}
+                                />
+                              </g>
+                            )
+                          })}
+                          
+                          {/* Hidden Layer 2 (3 nodes) */}
+                          {[0, 1, 2].map((i) => {
+                            const y = 60 + i * 80
+                            return (
+                              <g key={`hidden2-${i}`}>
+                                <motion.circle
+                                  cx="250"
+                                  cy={y}
+                                  r="12"
+                                  fill="url(#neuralGradient)"
+                                  stroke="#d946ef"
+                                  strokeWidth="2"
+                                  filter="url(#glow)"
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  whileInView={{ opacity: 1, scale: 1 }}
+                                  viewport={{ once: true }}
+                                  animate={{
+                                    opacity: [0.4, 1, 0.4],
+                                    scale: [0.9, 1.1, 0.9],
+                                  }}
+                                  transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay: 1 + i * 0.3,
+                                  }}
+                                />
+                              </g>
+                            )
+                          })}
+                          
+                          {/* Connections from Input to Hidden Layer 1 */}
+                          {[0, 1, 2].map((inputIdx) => {
+                            const inputY = 40 + inputIdx * 80
+                            return [0, 1, 2, 3].map((hiddenIdx) => {
+                              const hiddenY = 20 + hiddenIdx * 60
+                              return (
+                                <motion.line
+                                  key={`conn-${inputIdx}-${hiddenIdx}`}
+                                  x1="62"
+                                  y1={inputY}
+                                  x2="136"
+                                  y2={hiddenY}
+                                  stroke="url(#neuralGradient)"
+                                  strokeWidth="1"
+                                  opacity="0.3"
+                                  initial={{ pathLength: 0, opacity: 0 }}
+                                  whileInView={{ pathLength: 1, opacity: 0.3 }}
+                                  viewport={{ once: true }}
+                                  transition={{
+                                    pathLength: { duration: 1, delay: 0.5 },
+                                    opacity: { duration: 0.5, delay: 0.5 },
+                                  }}
+                                />
+                              )
+                            })
+                          })}
+                          
+                          {/* Connections from Hidden Layer 1 to Hidden Layer 2 */}
+                          {[0, 1, 2, 3].map((hidden1Idx) => {
+                            const hidden1Y = 20 + hidden1Idx * 60
+                            return [0, 1, 2].map((hidden2Idx) => {
+                              const hidden2Y = 60 + hidden2Idx * 80
+                              return (
+                                <motion.line
+                                  key={`conn-h1-${hidden1Idx}-h2-${hidden2Idx}`}
+                                  x1="164"
+                                  y1={hidden1Y}
+                                  x2="238"
+                                  y2={hidden2Y}
+                                  stroke="url(#neuralGradient)"
+                                  strokeWidth="1"
+                                  opacity="0.3"
+                                  initial={{ pathLength: 0, opacity: 0 }}
+                                  whileInView={{ pathLength: 1, opacity: 0.3 }}
+                                  viewport={{ once: true }}
+                                  transition={{
+                                    pathLength: { duration: 1, delay: 1 },
+                                    opacity: { duration: 0.5, delay: 1 },
+                                  }}
+                                />
+                              )
+                            })
+                          })}
+                          
+                          {/* Animated data flow particles */}
+                          {[0, 1, 2].map((i) => {
+                            const startY = 40 + i * 80
+                            const midY = 20 + (i % 4) * 60
+                            const endY = 60 + (i % 3) * 80
+                            return (
+                              <motion.circle
+                                key={`particle-${i}`}
+                                r="3"
+                                fill="#f43f5e"
+                                initial={{ opacity: 0, cx: 50, cy: startY }}
+                                animate={{
+                                  opacity: [0, 1, 1, 0],
+                                  cx: [50, 150, 250, 300],
+                                  cy: [startY, midY, endY, endY],
+                                }}
+                                transition={{
+                                  duration: 4,
                                   repeat: Infinity,
-                                  delay: 0.5 + i * 0.05 + i * 0.2,
-                                },
-                              }}
-                            >
-                              <div className="w-2 h-2 rounded-full bg-accent-400" />
-                            </motion.div>
-                          ))}
+                                  delay: i * 0.8,
+                                  ease: "easeInOut",
+                                }}
+                              />
+                            )
+                          })}
+                        </svg>
+                        
+                        {/* Layer Labels */}
+                        <div className="absolute bottom-4 left-0 right-0 flex justify-between px-4 text-xs text-gray-400">
+                          <span className="text-accent-400">Input</span>
+                          <span className="text-primary-400">Hidden</span>
+                          <span className="text-secondary-400">Output</span>
                         </div>
                       </div>
                     </div>
