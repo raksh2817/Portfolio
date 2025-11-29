@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const experiences = [
   {
     title: 'Database Developer',
-    company: 'Elmcrest Children&apos;s Center',
+    company: 'Elmcrest Childrens Center',
     location: 'Syracuse, NY (Part-Time)',
     period: 'Mar 2025 - Present',
     achievements: [
