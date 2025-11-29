@@ -69,7 +69,7 @@ export default function Hero() {
           >
             Master&apos;s in Applied Data Science • Building optimized and scalable data pipelines •
             Pursuing AI Engineering expertise • 
-            Developing AI agents • LLMs • Generative AI • RAG
+            Developing AI agents • LLM&apos;s • Generative AI • RAG
           </motion.p>
           
           <motion.div
