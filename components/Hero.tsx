@@ -67,7 +67,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"
           >
-            Master&apos;s in Applied Data Science • Building scalable data pipelines • 
+            Master&apos;s in Applied Data Science • Building optimized, scalable data pipelines 
              Pursuing AI Engineering expertise • 
             Developing AI agents with LLMs and predictive models
           </motion.p>
