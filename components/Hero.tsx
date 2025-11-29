@@ -60,7 +60,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-2xl md:text-4xl text-gray-300 mb-4"
           >
-            Graduate Research Assistant | Database Developer | Data Engineer
+            Data Engineer | Graduate Research Assistant | Database Developer | 
           </motion.p>
           
           <motion.p
@@ -68,7 +68,7 @@ export default function Hero() {
             className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"
           >
             Master&apos;s in Applied Data Science • Building scalable data pipelines • 
-            Developing predictive models • Automating reporting systems
+            Developing AI agents with LLMs and predictive models • Automating reporting systems
           </motion.p>
           
           <motion.div

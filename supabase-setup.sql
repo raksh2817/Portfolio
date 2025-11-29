@@ -41,3 +41,4 @@ SELECT * FROM contact_submissions
 WHERE read = FALSE
 ORDER BY created_at DESC;
 
+
