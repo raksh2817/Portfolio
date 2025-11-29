@@ -59,14 +59,80 @@ export default function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, rotate: [0, -2, 2, -2, 0] }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl font-bold text-gradient cursor-pointer"
+            className="cursor-pointer group relative"
             onClick={() => scrollToSection('home')}
           >
-            <span className="bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
-              Rakshith Srinath
-            </span>
+            <div className="relative">
+              {/* Tech/AI Logo Container */}
+              <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
+                {/* Animated background glow */}
+                <motion.div
+                  className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary-500/20 via-secondary-500/20 to-accent-500/20 blur-md"
+                  animate={{
+                    opacity: [0.3, 0.6, 0.3],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+                
+                {/* Main logo container with tech border */}
+                <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-primary-900/80 to-secondary-900/80 border-2 border-primary-500/50 group-hover:border-primary-400 transition-all duration-300 flex items-center justify-center overflow-hidden">
+                  {/* Animated tech grid pattern */}
+                  <div className="absolute inset-0 opacity-10">
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <defs>
+                        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary-400" />
+                        </pattern>
+                      </defs>
+                      <rect width="100" height="100" fill="url(#grid)" />
+                    </svg>
+                  </div>
+                  
+                  {/* Neural network nodes animation */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    {[0, 1, 2].map((i) => (
+                      <motion.div
+                        key={i}
+                        className="absolute w-1 h-1 rounded-full bg-accent-400"
+                        style={{
+                          left: `${20 + i * 30}%`,
+                          top: `${30 + (i % 2) * 40}%`,
+                        }}
+                        animate={{
+                          opacity: [0.3, 1, 0.3],
+                          scale: [0.8, 1.2, 0.8],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: i * 0.4,
+                        }}
+                      />
+                    ))}
+                  </div>
+                  
+                  {/* RS Initials */}
+                  <div className="relative z-10 flex items-center justify-center">
+                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent tracking-tight">
+                      RS
+                    </span>
+                  </div>
+                  
+                  {/* Corner tech accents */}
+                  <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary-400 opacity-60" />
+                  <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-secondary-400 opacity-60" />
+                  <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-accent-400 opacity-60" />
+                  <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary-400 opacity-60" />
+                </div>
+              </div>
+            </div>
           </motion.div>
           
           {/* Desktop Navigation */}
