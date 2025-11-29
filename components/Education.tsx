@@ -4,22 +4,22 @@ import { motion } from 'framer-motion'
 
 const education = [
   {
-    degree: 'Master of Science - MS, Applied Data Science',
-    institution: 'Clarkson University Graduate School',
-    location: 'Potsdam, New York, United States',
-    period: 'January 2024 - May 2025',
+    degree: 'MS in Applied Data Science',
+    institution: 'Clarkson University',
+    location: 'Potsdam, NY',
+    period: 'Jan 2024 - Dec 2025',
   },
   {
-    degree: 'Post Graduate Program in Data Science and Engineering',
-    institution: 'Great Learning',
-    location: 'India',
-    period: '2020 - 2021',
+    degree: 'PG Diploma in Data Science',
+    institution: 'Great Lakes Institute of Management',
+    location: 'Bengaluru, India',
+    period: 'Oct 2020 - Jun 2021',
   },
   {
-    degree: 'Bachelor of Technology - BTech, Computer Science and Engineering',
-    institution: 'Christ University, Bangalore',
-    location: 'Bangalore, India',
-    period: '2016 - 2020',
+    degree: 'BS in Computer Science & Engineering',
+    institution: 'Christ University',
+    location: 'Bengaluru, India',
+    period: 'Aug 2016 - Jun 2020',
   },
 ]
 

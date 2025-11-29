@@ -93,10 +93,10 @@ const buildDataPipeline = async () => {
             <div className="glass-effect rounded-2xl p-8 card-hover border-l-4 border-primary-500">
               <h3 className="text-2xl font-bold text-primary-400 mb-4">My Story</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                I&apos;m a <span className="text-primary-400 font-semibold">Graduate student in Applied Data Science</span> with a passion for turning raw data into meaningful solutions. What started as curiosity about how data drives decisions has evolved into a career building production-grade systems.
+                I&apos;m a <span className="text-primary-400 font-semibold">versatile technologist with 3+ years of experience</span> in data engineering, full-stack development, and machine learning. Proven track record building scalable data pipelines processing 2-3 TB daily, developing web applications, and deploying ML models. Currently pursuing <span className="text-secondary-400 font-semibold">MS in Applied Data Science</span> at Clarkson University, combining engineering depth with analytical rigor.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Currently, I&apos;m balancing <span className="text-secondary-400 font-semibold">academic research</span> in construction materials with <span className="text-accent-400 font-semibold">real-world applications</span>—developing custom database solutions, building AI-powered systems, and creating data pipelines that process millions of records daily.
+                My core expertise spans <span className="text-accent-400 font-semibold">Python, SQL, Apache Spark, cloud platforms (AWS/Azure)</span>, and modern ML/web frameworks. I&apos;ve built enterprise-scale systems for Adobe&apos;s B2B marketing platform serving 10K+ users, optimized data warehouses achieving 2x faster query execution, and migrated on-premise systems to Azure Databricks with 40% runtime reduction.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Currently, I&apos;m deeply immersed in <span className="text-accent-400 font-semibold">AI engineering</span>—studying deep learning architectures, neural networks, and production AI systems. My goal is to become a proficient <span className="text-primary-400 font-semibold">AI Engineer</span>, combining my data engineering expertise with cutting-edge AI technologies to build intelligent systems that solve complex problems.
