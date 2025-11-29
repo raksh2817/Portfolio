@@ -80,14 +80,16 @@ export async function GET() {
         }
 
         const commits: GitHubCommit[] = await commitsResponse.json()
-        return commits.map((commit) => ({
-          sha: commit.sha.substring(0, 7),
-          message: commit.commit.message.split('\n')[0], // First line only
-          date: commit.commit.author.date,
-          url: commit.html_url,
-          repo: repo.name,
-          repoUrl: repo.html_url,
-        })))
+        return commits.map((commit) => {
+          return {
+            sha: commit.sha.substring(0, 7),
+            message: commit.commit.message.split('\n')[0], // First line only
+            date: commit.commit.author.date,
+            url: commit.html_url,
+            repo: repo.name,
+            repoUrl: repo.html_url,
+          }
+        })
       } catch (error) {
         console.error(`Error fetching commits for ${repo.name}:`, error)
         return []
