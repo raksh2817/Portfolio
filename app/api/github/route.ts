@@ -18,10 +18,18 @@ interface GitHubCommit {
 }
 
 interface GitHubRepo {
+  id: number
   name: string
   full_name: string
   html_url: string
+  description: string | null
+  language: string | null
+  stargazers_count: number
+  forks_count: number
+  updated_at: string
+  created_at: string
   default_branch: string
+  topics: string[]
 }
 
 export async function GET() {
@@ -29,9 +37,9 @@ export async function GET() {
     const username = 'raksh2817'
     const githubToken = process.env.GITHUB_TOKEN // Optional: for higher rate limits
 
-    // Fetch user's repositories
+    // Fetch user's repositories (increased to get more repos)
     const reposResponse = await fetch(
-      `https://api.github.com/users/${username}/repos?sort=updated&per_page=10`,
+      `https://api.github.com/users/${username}/repos?sort=updated&per_page=30&type=all`,
       {
         headers: githubToken
           ? {
@@ -91,7 +99,28 @@ export async function GET() {
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 20) // Get 20 most recent commits
 
-    return NextResponse.json({ commits: allCommits }, { status: 200 })
+    // Format repositories data
+    const formattedRepos = repos
+      .filter(repo => !repo.name.toLowerCase().includes('portfolio')) // Exclude portfolio repo itself (case-insensitive)
+      .map(repo => ({
+        id: repo.id,
+        name: repo.name,
+        fullName: repo.full_name,
+        url: repo.html_url,
+        description: repo.description || 'No description available',
+        language: repo.language || 'Other',
+        stars: repo.stargazers_count || 0,
+        forks: repo.forks_count || 0,
+        updatedAt: repo.updated_at,
+        createdAt: repo.created_at,
+        topics: (repo as any).topics || [], // Topics might not be in basic response
+      }))
+      .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
+
+    return NextResponse.json({ 
+      commits: allCommits,
+      repositories: formattedRepos 
+    }, { status: 200 })
   } catch (error) {
     console.error('Error fetching GitHub commits:', error)
     return NextResponse.json(
