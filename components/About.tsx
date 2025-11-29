@@ -27,9 +27,9 @@ export default function About() {
     },
     {
       year: '2025',
-      title: 'The Future',
-      description: 'Exploring AI agents, LLMs, and cutting-edge data engineering techniques to push boundaries.',
-      icon: '✨',
+      title: 'AI Engineering Journey',
+      description: 'Dedicated to mastering AI engineering—deep learning, neural networks, and production AI systems. Building expertise to become a leading AI engineer.',
+      icon: '🤖',
     },
   ]
 
@@ -93,13 +93,16 @@ const buildDataPipeline = async () => {
             <div className="glass-effect rounded-2xl p-8 card-hover border-l-4 border-primary-500">
               <h3 className="text-2xl font-bold text-primary-400 mb-4">My Story</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                I&apos;m a <span className="text-primary-400 font-semibold">Master&apos;s student in Applied Data Science</span> with a passion for turning raw data into meaningful solutions. What started as curiosity about how data drives decisions has evolved into a career building production-grade systems.
+                I&apos;m a <span className="text-primary-400 font-semibold">Graduate student in Applied Data Science</span> with a passion for turning raw data into meaningful solutions. What started as curiosity about how data drives decisions has evolved into a career building production-grade systems.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Currently, I&apos;m balancing <span className="text-secondary-400 font-semibold">academic research</span> in construction materials with <span className="text-accent-400 font-semibold">real-world applications</span>—developing custom database solutions, building AI-powered systems, and creating data pipelines that process millions of records daily.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                When I&apos;m not coding, I&apos;m exploring the latest in <span className="text-primary-400 font-semibold">LLMs, AI agents, and distributed systems</span>. I believe the best solutions come from understanding both the technical and human sides of data.
+                Currently, I&apos;m deeply immersed in <span className="text-accent-400 font-semibold">AI engineering</span>—studying deep learning architectures, neural networks, and production AI systems. My goal is to become a proficient <span className="text-primary-400 font-semibold">AI Engineer</span>, combining my data engineering expertise with cutting-edge AI technologies to build intelligent systems that solve complex problems.
+              </p>
+              <p className="text-gray-300 leading-relaxed mt-4">
+                I believe the best solutions come from understanding both the technical and human sides of data, and AI is the next frontier in creating truly intelligent, autonomous systems.
               </p>
             </div>
 
@@ -229,24 +232,138 @@ const buildDataPipeline = async () => {
           </motion.div>
         </div>
 
-        {/* Skills highlight */}
+        {/* AI Engineering Focus Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 relative overflow-hidden"
+        >
+          <div className="glass-effect rounded-2xl p-8 md:p-12 border-2 border-accent-500/30 relative">
+            {/* Animated background pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-0 left-0 w-full h-full" style={{
+                backgroundImage: `radial-gradient(circle at 2px 2px, rgba(236, 72, 153, 0.3) 1px, transparent 0)`,
+                backgroundSize: '40px 40px'
+              }} />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Left side - Visual AI representation */}
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="flex-1"
+                >
+                  <div className="relative">
+                    {/* AI Brain visualization */}
+                    <div className="relative w-full max-w-md mx-auto">
+                      <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 to-primary-500/20 rounded-full blur-3xl animate-pulse" />
+                      <div className="relative bg-gradient-to-br from-accent-900/50 to-primary-900/50 rounded-2xl p-8 border border-accent-500/30">
+                        <div className="grid grid-cols-3 gap-4">
+                          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ opacity: 0, scale: 0 }}
+                              whileInView={{ opacity: 1, scale: 1 }}
+                              viewport={{ once: true }}
+                              className="aspect-square rounded-lg bg-gradient-to-br from-accent-400/30 to-primary-400/30 border border-accent-500/50 flex items-center justify-center"
+                              animate={{
+                                opacity: [0.3, 0.7, 0.3],
+                              }}
+                              transition={{
+                                scale: { duration: 0.3, delay: 0.5 + i * 0.05 },
+                                opacity: {
+                                  duration: 2,
+                                  repeat: Infinity,
+                                  delay: 0.5 + i * 0.05 + i * 0.2,
+                                },
+                              }}
+                            >
+                              <div className="w-2 h-2 rounded-full bg-accent-400" />
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Right side - Content */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="flex-1"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-4xl">🤖</span>
+                    <h3 className="text-3xl md:text-4xl font-bold">
+                      <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-accent-400 to-primary-400">
+                        AI Engineering Journey
+                      </span>
+                    </h3>
+                  </div>
+                  <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                    I&apos;m actively pursuing expertise in <span className="text-accent-400 font-semibold">AI Engineering</span>, focusing on deep learning, neural networks, and production AI systems. My goal is to become a leading AI engineer who bridges the gap between data engineering and artificial intelligence.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-accent-400 mt-2 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-accent-400 font-semibold mb-1">Deep Learning & Neural Networks</h4>
+                        <p className="text-gray-400 text-sm">Mastering architectures, optimization, and training strategies</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary-400 mt-2 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-primary-400 font-semibold mb-1">Production AI Systems</h4>
+                        <p className="text-gray-400 text-sm">Building scalable, reliable AI infrastructure</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-secondary-400 mt-2 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-secondary-400 font-semibold mb-1">LLMs & AI Agents</h4>
+                        <p className="text-gray-400 text-sm">Developing intelligent agents and language models</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Skills highlight */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 glass-effect rounded-2xl p-8 border-t-4 border-secondary-500"
         >
           <h3 className="text-2xl font-bold text-secondary-400 mb-6 text-center">Tech Arsenal</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Python', 'SQL', 'Spark', 'Azure', 'AWS', 'Kafka', 'Docker', 'Kubernetes', 'FastAPI', 'React', 'LLMs', 'LangChain'].map((tech, index) => (
+            {['Python', 'SQL', 'Spark', 'Azure', 'AWS', 'Kafka', 'Docker', 'Kubernetes', 'FastAPI', 'React', 'LLMs', 'LangChain', 'PyTorch', 'TensorFlow', 'Neural Networks'].map((tech, index) => (
               <motion.span
                 key={tech}
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.5 + index * 0.05, type: 'spring' }}
-                className="px-4 py-2 rounded-full bg-gradient-to-r from-primary-900/50 to-secondary-900/50 border border-primary-500/30 text-gray-300 text-sm font-medium hover:border-primary-400 hover:text-primary-300 transition-all cursor-default"
+                transition={{ duration: 0.3, delay: 0.6 + index * 0.05, type: 'spring' }}
+                className={`px-4 py-2 rounded-full border text-gray-300 text-sm font-medium hover:scale-110 transition-all cursor-default ${
+                  ['PyTorch', 'TensorFlow', 'Neural Networks'].includes(tech)
+                    ? 'bg-gradient-to-r from-accent-900/50 to-accent-800/30 border-accent-500/50 hover:border-accent-400 hover:text-accent-300'
+                    : 'bg-gradient-to-r from-primary-900/50 to-secondary-900/50 border-primary-500/30 hover:border-primary-400 hover:text-primary-300'
+                }`}
                 whileHover={{ scale: 1.1, y: -2 }}
               >
                 {tech}
