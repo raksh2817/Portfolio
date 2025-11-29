@@ -60,7 +60,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-2xl md:text-4xl text-gray-300 mb-4"
           >
-            Data Engineer <span className="text-gray-500 mx-2">→</span> <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-400">On the path to AI Engineering</span>
+            Data Engineer <span className="text-gray-500 mx-2">→</span> <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-400">AI Engineer</span>
           </motion.p>
           
           <motion.p
