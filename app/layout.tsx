@@ -4,7 +4,11 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+})
 
 export const metadata: Metadata = {
   title: 'Rakshith Srinath | Graduate Research Assistant | Database Developer | Data Engineer',
