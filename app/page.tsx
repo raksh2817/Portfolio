@@ -12,6 +12,7 @@ import GitHubRepositories from '@/components/GitHubRepositories'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
 import ScrollToTop from '@/components/ScrollToTop'
+import ChatBot from '@/components/ChatBot'
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Certifications />
       <Contact />
       <ScrollToTop />
+      <ChatBot />
     </main>
   )
 }
