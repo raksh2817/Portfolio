@@ -7,9 +7,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Rakshith Srinath | Graduate Research Assistant | Database Developer | Data Engineer',
-  description: 'Master\'s in Applied Data Science with 3 years of professional experience. Building scalable data pipelines, automating reporting systems, and developing predictive models. Expert in Python, SQL, Spark, Azure, and AWS.',
-  keywords: 'Data Engineer, Database Developer, Applied Data Science, Python, SQL, Spark, Azure, AWS, Machine Learning, Data Analytics',
+  title: 'Rakshith Srinath | Data Engineer → AI Engineer | Solutions Engineer',
+  description: 'Solutions Engineer at LifeLine Billing Solutions with a Master\'s in Applied Data Science (Clarkson University) and 3+ years of experience. Building scalable data pipelines and ETL, claims-management platforms, and full-stack apps. Expert in Python, SQL, Spark, Azure, AWS, Flask, and React.',
+  keywords: 'Data Engineer, AI Engineer, Solutions Engineer, Applied Data Science, Python, SQL, Spark, Azure, AWS, PostgreSQL, Flask, React, ETL, RAG, LLM, Machine Learning, Data Analytics',
 }
 
 export default function RootLayout({

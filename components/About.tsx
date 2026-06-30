@@ -20,15 +20,15 @@ export default function About() {
       icon: '💼',
     },
     {
-      year: '2024',
+      year: '2024-2025',
       title: 'Academic Excellence',
-      description: 'Pursuing Masters in Applied Data Science while contributing to research and developing custom database solutions.',
+      description: 'Advanced my MS in Applied Data Science at Clarkson University while architecting enterprise data warehouses and building hands-on AI/ML projects.',
       icon: '🎓',
     },
     {
-      year: '2025',
+      year: '2025 →',
       title: 'AI Engineering Journey',
-      description: 'Dedicated to mastering AI engineering—deep learning, neural networks, and production AI systems. Building expertise to become a leading AI engineer.',
+      description: 'Earned my MS (Dec 2025) and stepped into a Solutions Engineer role — while going deep on AI engineering: deep learning, neural networks, LLMs, and production AI systems.',
       icon: '🤖',
     },
   ]
@@ -93,7 +93,7 @@ const buildDataPipeline = async () => {
             <div className="glass-effect rounded-2xl p-8 card-hover border-l-4 border-primary-500">
               <h3 className="text-2xl font-bold text-primary-400 mb-4">My Story</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                I&apos;m a <span className="text-primary-400 font-semibold">versatile technologist with 3+ years of experience</span> in data engineering, full-stack development, and machine learning. Proven track record building scalable data pipelines processing 2-3 TB daily, developing web applications, and deploying ML models. Currently pursuing <span className="text-secondary-400 font-semibold">MS in Applied Data Science</span> at Clarkson University, combining engineering depth with analytical rigor.
+                I&apos;m a <span className="text-primary-400 font-semibold">versatile technologist with 3+ years of experience</span> in data engineering, full-stack development, and machine learning. Proven track record building scalable data pipelines processing 2-3 TB daily, developing web applications, and deploying ML models. I hold an <span className="text-secondary-400 font-semibold">MS in Applied Data Science</span> from Clarkson University (Dec 2025), and I&apos;m currently a <span className="text-secondary-400 font-semibold">Solutions Engineer</span> at LifeLine Billing Solutions — owning end-to-end delivery from data architecture and ETL pipelines to a Flask/React production application.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 My core expertise spans <span className="text-accent-400 font-semibold">Python, SQL, Apache Spark, cloud platforms (AWS/Azure)</span>, and modern ML/web frameworks. I&apos;ve built enterprise-scale systems for Adobe&apos;s B2B marketing platform serving 10K+ users, optimized data warehouses achieving 2x faster query execution, and migrated on-premise systems to Azure Databricks with 40% runtime reduction.

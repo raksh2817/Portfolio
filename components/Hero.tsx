@@ -92,6 +92,20 @@ export default function Hero() {
             >
               View Projects
             </motion.a>
+            <motion.a
+              href="/Rakshith_Srinath_Resume.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 glass-effect rounded-full font-semibold text-accent-400 border border-accent-500/50 hover:border-accent-400 transition-all inline-flex items-center gap-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Résumé
+            </motion.a>
           </motion.div>
           
           <motion.div
