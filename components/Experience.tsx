@@ -4,14 +4,15 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    title: 'Database Developer',
-    company: 'Elmcrest Childrens Center',
-    location: 'Syracuse, NY (Part-Time)',
-    period: 'Mar 2025 - Present',
+    title: 'Solutions Engineer',
+    company: 'LifeLine Billing Solutions Inc',
+    location: 'Texas, USA — Remote',
+    period: 'Dec 2025 - Present',
     achievements: [
-      'Architected enterprise data warehouse with dimensional modeling (fact/dimension tables) to centralize student behavioral data from 50+ distributed entry points across residential facilities',
-      'Implemented three-tier architecture: presentation layer (Access forms), business logic layer (VBA modules), and data layer (normalized relational schema) ensuring scalability and maintainability',
-      'Developed real-time data pipeline with automated validation rules, referential integrity constraints, and audit logging, processing 1000+ monthly transactions with 99.9% accuracy',
+      'Architected an end-to-end claims management system replacing manual Excel workflows, designing a PostgreSQL schema with dimensional modeling to centralize claims data from third-party integrations',
+      'Built a batch ETL pipeline to ingest, validate, and transform claims data from external systems into a normalized relational database with audit logging and error handling',
+      'Developed a role-based workflow platform with Flask REST APIs and a React frontend, enabling 4 user types to track the claims lifecycle across configurable stages',
+      'Scaled the system beyond pilot to production deployment serving active users, with a roadmap to integrate AI-powered automation features',
     ],
   },
   {
@@ -20,20 +21,20 @@ const experiences = [
     location: 'Chennai, India',
     period: 'Aug 2021 - Apr 2023',
     achievements: [
-      'Built and maintained enterprise-scale clickstream analytics pipelines processing 2-3 TB daily using PySpark, HiveQL, and SQL Server for Adobe&apos;s B2B marketing platform serving 10K+ users',
+      'Built clickstream analytics pipelines processing 2-3 TB daily using PySpark, HiveQL, and SQL Server for Adobe&apos;s B2B marketing platform serving 10K+ users',
+      'Developed an automated data reconciliation framework using PySpark and Airflow to detect and resolve discrepancies across upstream data sources, reducing manual QA effort by 60%',
       'Optimized data warehouse performance through partitioning, bucketing, and columnar formats (Parquet/ORC), achieving 2x faster query execution and 50% storage reduction',
-      'Spearheaded migration from on-premise Hadoop to Azure Databricks with Delta Lake, reducing ETL runtimes by 40% and improving data freshness from hourly to near real-time',
-      'Implemented data quality frameworks and monitoring systems ensuring 99.9% pipeline uptime and data accuracy',
+      'Led migration from on-premise Hadoop to Azure Databricks with Delta Lake, reducing ETL runtimes by 40% with 99.9% pipeline uptime',
     ],
   },
   {
-    title: 'Database Developer',
+    title: 'Software Engineer',
     company: 'Skyward Publication',
     location: 'Bengaluru, India',
     period: 'May 2020 - Jul 2021',
     achievements: [
-      'Architected optimized database schemas in MySQL/SQL Server improving query performance by 30%',
-      'Developed Python ETL pipelines processing 100K+ records daily',
+      'Engineered ETL pipelines (10K+ records/day) and full-stack applications for a small-scale publisher using Python, JavaScript, MySQL, SQL Server, and REST APIs',
+      'Built an internal content management dashboard with a JavaScript frontend and Python backend, streamlining the editorial workflow and reducing publication turnaround time by 25%',
     ],
   },
 ]

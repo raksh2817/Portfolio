@@ -29,11 +29,19 @@ const skillCategories = [
   },
   {
     title: 'Cloud & DevOps',
-    skills: ['AWS (S3, EC2, SageMaker)', 'Azure (Databricks, ADF)', 'Docker', 'Kubernetes', 'CI/CD', 'Linux'],
+    skills: ['AWS (S3, EC2, Glue, Redshift, SageMaker)', 'Azure (Databricks, ADF)', 'Docker', 'Kubernetes', 'CI/CD', 'Linux'],
     colorClass: 'text-primary-400',
     bgClass: 'bg-primary-900/50',
     borderClass: 'border-primary-500/30',
     textClass: 'text-primary-300'
+  },
+  {
+    title: 'Web Development',
+    skills: ['Flask', 'FastAPI', 'React', 'Bootstrap', 'HTML/CSS', 'REST APIs'],
+    colorClass: 'text-accent-400',
+    bgClass: 'bg-accent-900/50',
+    borderClass: 'border-accent-500/30',
+    textClass: 'text-accent-300'
   },
   {
     title: 'Databases & Tools',

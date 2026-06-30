@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Real-time Streaming Pipeline',
     tech: 'Kafka, Spark Streaming, Delta Lake, AWS',
-    period: 'Oct - Dec 2024',
+    period: 'Oct - Dec 2025',
     description: 'Built real-time pipeline processing 100K events/second with exactly-once semantics and <3 second latency. Deployed on AWS using Docker/Kubernetes with auto-scaling based on lag metrics.',
     borderClass: 'border-primary-500',
     textClass: 'text-primary-400',
@@ -14,10 +14,18 @@ const projects = [
   {
     title: 'LLM-Powered Document Analysis System',
     tech: 'LangChain, ChromaDB, FastAPI, React',
-    period: 'May - Jul 2024',
+    period: 'May - Jul 2025',
     description: 'Developed RAG system achieving 92% accuracy across 10K+ documents with web interface. Built React + FastAPI application with user authentication and real-time document processing.',
     borderClass: 'border-secondary-500',
     textClass: 'text-secondary-400',
+  },
+  {
+    title: 'Enterprise Behavioral Data Warehouse',
+    tech: 'MS Access, VBA, SQL',
+    period: 'Mar - Dec 2025',
+    description: 'Led a team of 5 to architect an enterprise data warehouse with dimensional modeling, centralizing behavioral data from 50+ distributed entry points across residential facilities. Built an automated ETL pipeline with validation rules, referential-integrity constraints, and audit logging, processing 1000+ monthly transactions at 99.9% accuracy.',
+    borderClass: 'border-accent-500',
+    textClass: 'text-accent-400',
   },
   {
     title: 'End-to-End ML Pipeline for Churn Prediction',

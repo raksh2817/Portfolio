@@ -16,7 +16,7 @@ const education = [
     period: 'Oct 2020 - Jun 2021',
   },
   {
-    degree: 'BS in Computer Science & Engineering',
+    degree: 'B.Tech in Computer Science & Engineering',
     institution: 'Christ University',
     location: 'Bengaluru, India',
     period: 'Aug 2016 - Jun 2020',
