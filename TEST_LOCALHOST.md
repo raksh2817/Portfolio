@@ -9,8 +9,9 @@
 
 2. **Create `.env.local` file** in the root directory with your Supabase credentials:
    ```env
-   SUPABASE_URL=https://jimbjsgrhlaflmrjijxt.supabase.co
+   SUPABASE_URL=https://wetzuykavkdbnzuglqxp.supabase.co
    SUPABASE_ANON_KEY=your-anon-key-here
+   SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
    ```
 
    To get your anon key:
@@ -112,5 +113,10 @@ Once local testing is successful:
 3. Vercel will automatically deploy
 4. Test on production URL
 5. Verify submissions appear in Supabase
+
+
+
+
+
 
 

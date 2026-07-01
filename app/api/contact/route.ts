@@ -23,8 +23,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Validate Supabase environment variables
-    if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
+    const supabaseUrl = process.env.SUPABASE_URL
+    const supabaseKey =
+      process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY
+
+    if (!supabaseUrl || !supabaseKey) {
       console.error('Supabase environment variables are not set')
       return NextResponse.json(
         { error: 'Server configuration error. Please contact the administrator.' },
@@ -32,11 +35,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create Supabase client
-    const supabase = createClient(
-      process.env.SUPABASE_URL,
-      process.env.SUPABASE_ANON_KEY
-    )
+    const supabase = createClient(supabaseUrl, supabaseKey)
 
     // Insert contact form submission into Supabase
     const { data, error } = await supabase

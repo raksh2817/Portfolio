@@ -105,11 +105,11 @@ The contact form stores all submissions in a **Supabase database**.
 
 ### Quick Setup
 
-1. ✅ **Supabase is already connected to Vercel** - Environment variables are automatically provided!
+1. Create `.env.local` with your Supabase credentials (see `SUPABASE_SETUP.md`)
 2. **Run the SQL** from `supabase-setup.sql` in your Supabase SQL Editor to create the table
 3. **Install dependencies**: `npm install`
 
-**For Local Development:** Create `.env.local` with your Supabase credentials (see `SUPABASE_SETUP.md`)
+**For Production (Vercel):** Set `SUPABASE_URL`, `SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY`. Remove the old paused `db_portfolio_rs` integration if deploys fail at provisioning.
 
 For detailed setup instructions, see `SUPABASE_SETUP.md`.
 

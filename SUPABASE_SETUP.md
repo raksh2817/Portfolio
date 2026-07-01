@@ -30,26 +30,29 @@ This will create:
 
 1. In Supabase dashboard, go to **Settings** → **API**
 2. Copy the following:
-   - **Project URL**: `https://jimbjsgrhlaflmrjijxt.supabase.co` (already configured)
-   - **anon/public key** or **service_role key** (this is your `SUPABASE_KEY`)
+   - **Project URL**: `https://wetzuykavkdbnzuglqxp.supabase.co`
+   - **anon/public key** (for client-side use if needed)
+   - **service_role key** (for the server-side contact API route only — never expose in the browser)
 
 ### 4. Environment Variables
 
 **For Production (Vercel):**
 
-✅ **Already Configured!** Since Supabase is connected to Vercel, the environment variables are automatically provided:
-- `SUPABASE_URL` - Your Supabase project URL
-- `SUPABASE_ANON_KEY` - Your Supabase anon key
+Set these in Vercel → **Settings** → **Environment Variables** (or reconnect the Supabase integration to the `portfolio-contact` project):
+- `SUPABASE_URL` — `https://wetzuykavkdbnzuglqxp.supabase.co`
+- `SUPABASE_ANON_KEY` — anon/public key
+- `SUPABASE_SERVICE_ROLE_KEY` — service role key (required for the contact API route)
 
-The code uses these standard environment variables from your Vercel-Supabase integration.
+Remove the old `db_portfolio_rs` integration if deploys fail with "Provisioning integrations failed".
 
 **For Local Development:**
 
 Create a `.env.local` file in the root directory:
 
 ```env
-SUPABASE_URL=https://jimbjsgrhlaflmrjijxt.supabase.co
+SUPABASE_URL=https://wetzuykavkdbnzuglqxp.supabase.co
 SUPABASE_ANON_KEY=your-anon-key-here
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
 ```
 
 You can get these values from your Supabase project: **Settings** → **API**
